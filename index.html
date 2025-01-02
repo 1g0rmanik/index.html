@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="Portfolio site">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1g0rmanik</title>
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Slackey&family=Rowdies:wght@400;700&display=swap');
+        html {
+    scroll-behavior: smooth; /* Увімкнення плавного прокручування */
+}
+body {
+    font-family: "Rowdies", sans-serif;
+    margin: 0;
+    padding: 0;
+    animation-name: opac;
+    animation-duration: 5s;
+  }
+header{
+    width: 100%;
+    height: 66px;
+    padding-top: 10px;
+    padding-left: 5px;
+    background-color: black;
+    justify-content: space-between;
+    position: relative;
+    display: flex; 
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+      }
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 5px 10px;
+      } 
+}
+a{
+    padding-left: 10px;
+    text-decoration: none;
+    color: azure;
+}
+footer{
+    padding-top: 20px;
+    padding-left: 10px;
+    width: 99.65%;
+    height: 43px;
+    background-color: grey;
+    color: whitesmoke;
+}
+@keyframes opac{
+    100% {opacity: 100;}
+    75%{opacity: 75;}
+    50%{opacity: 50;}
+    25%{opacity: 25;}
+    0%{opacity: 0;}
+}
+#Home {
+    background-image: url('work.jpg'); /* Фонова картинка */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh; /* Висота секції займає весь екран */
+    display: flex; /* Використовуємо Flexbox */
+    justify-content: center; /* Горизонтальне вирівнювання */
+    align-items: center; /* Вертикальне вирівнювання */
+}
+.shift-right {
+    margin-left: 20px; /* Встановлюємо відступ зліва */
+    /* або */
+    transform: translateX(20px); /* Зсуваємо текст вправо */
+}
+#hello {
+    color: black;
+    font: 10vw "Rowdies", sans-serif; 
+    text-align: center; 
+    margin: 0; 
+    padding: 0; 
+}
+/* Для екранів розміром до 1024px */
+@media screen and (max-width: 1024px) {
+    .me{
+        padding-left: 0px;
+        padding-top: 50px;
+        width: 500px;
+        height: 500px;
+    }
+    .circle {
+        display: none; /* Приховує елемент */
+    }
+    #Projekts h1{
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    #box1, #box2{
+        margin-top: 20px;
+    }
+    #box, #box2, #box1{
+        margin-top: -70px;
+    }
+    
+    
+  }
+@media (max-width: 768px){
+    #hello{
+        font-size: 80px;
+        padding-top: 200px;
+    }
+    .ko {
+        font-size: 1rem; 
+    }
+    .circle {
+        display: none; /* Приховує елемент */
+    }
+    #box, #box2, #box1{
+        margin-top: -70px;
+    }
+    #box{
+        margin-bottom: 200px;
+        margin-top: -100px;
+    }
+   
+    #Projekts h1{
+        margin-bottom: 100px;
+        margin-top: -30px;
+    }
+    #box1, #box2{
+        margin-top: 20px;
+    }
+    
+}
+@media (max-width: 480px){
+    #hello.shift-right {
+        margin-left: 20px; /* Зсуваємо текст вправо */
+    }
+    .me {
+        
+        transform: translateX(-50px); 
+      }
+    .circle {
+        display: none; /* Приховує елемент */
+    }
+    }        
+#about{
+    margin-top: 5%; /* Зменшено відступи для кращого вигляду */
+    width: 100%; /* Виправлено ширину */
+    height: auto; /* Дозволяємо автоматичну висоту */
+    padding: 20px; /* Внутрішні відступи для читабельності */
+    box-sizing: border-box; /* Врахування відступів у ширині */
+    margin-top: 100%;
+    background-color: antiquewhite;
+}
+.ko {
+    font-family: "Slackey", sans-serif;
+    font-size: clamp(1rem, 1.5vw, 2rem); /* Адаптивний розмір шрифту */
+    line-height: 1.5;
+    color: #333;
+    max-width: 800px; /* Обмеження ширини для зручного читання */
+    margin: 20px auto; /* Центрування та відступи */
+}
+
+@media (max-width: 1024px) {
+    .ko {
+        font-size: 1rem; /* Для планшетів */
+        max-width: 90%; /* Обмеження ширини */
+        margin-top: 20px;
+    }
+    .me{
+        padding-left: 100px;
+        padding-top: 50px;
+        width: 500px;
+        height: 500px;
+    }
+    .messenger-container {
+        text-align: center;
+        width: 90%;
+        max-width: 2000px;
+        height: 90vh; /* Займає 90% висоти екрана */
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+       
+    }
+    #box, #box1, #box2{
+        margin-top: -110px;
+    }
+    
+    
+}
+
+@media (max-width: 768px) {
+    .ko {
+        font-size: 1.2rem; /* Для телефонів */
+        text-align: justify; /* Вирівнювання для кращої читабельності */
+        padding: 0 15px; /* Внутрішні відступи */
+    }
+    
+}
+
+#box1, #box2, #box{
+    width: 90%; /* Замість фіксованої ширини */
+    max-width: 250px; /* Максимальна ширина для великих екранів */
+    height: auto; /* Автоматична висота для адаптації */
+  background-color: #f5f5f5;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 150px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+#box2:hover, #box1:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+#box:hover, #box1:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+
+    #Projekts {
+        margin-top: 500px; /* Відступ знизу, щоб уникнути перекривання */
+        padding-top: 15%;
+        width: 100%;
+        min-height: 80vh; /* Заміна height на min-height */
+        background-color: lightgray;
+        display: flex; /* Увімкнення Flexbox */
+        justify-content: center; /* Вирівнювання по центру */
+        gap: 20px; /* Відстань між елементами */
+        flex-wrap: wrap; /* Перенесення елементів на новий рядок, якщо бракує місця */
+    }
+
+    #Projekts h1 {
+        text-align: center; /* Вирівнювання тексту по центру */
+        position: relative; /* Для коректного використання top */
+        top: -30px;  /* Спробуйте закоментувати або видалити це */
+        width: 100%; /* Щоб текст займав весь доступний простір */
+    }
+    @media (min-width: 1024px) {
+    .me {
+        margin-left: 50px; /* Встановлюємо відступ зліва */
+        /* або */
+        padding-left: 20px; /* Додаємо відступ зліва */
+    }
+}
+
+
+.img3, .img2{
+    width: 75px;
+}
+/*img{
+    margin-top: -200px;
+    margin-left: 90px;
+}*/
+.me{
+    padding-left: 0;
+    padding-top: 50px;
+    width: 500px;
+    height: 500px;
+}
+.circle{
+    background-image: url('work-table.jpg'); /* Посилання на зображення */
+    background-size: cover; /* Масштабувати зображення, щоб покрило весь блок */
+    background-position: center;
+    margin-left: 65%;
+    margin-top: -400px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+#form{
+    width: 300px;
+    height: 700px;
+    margin-top: 200px;
+}
+#text{
+    width: 500px;
+    margin-bottom: 50px;
+}
+
+#text1{
+    width: 700px;
+    height: 300px;
+}
+#Contact {
+    padding-top: 500px; /* Відступ зверху для простору між секціями */
+    padding: 0; /* Відсутність зовнішніх відступів */
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Контейнер займає всю висоту екрану */
+}
+
+.messenger-container {
+    text-align: center;
+    width: 90%;
+    max-width: 2000px;
+    height: 90vh; /* Займає 90% висоти екрана */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    height: 100%; /* Форма заповнює контейнер */
+}
+
+input, #email{
+    width: 96%;
+    height: 20px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+}
+
+input:focus, #message:focus {
+    outline: none;
+    border-color: #0078d7;
+    box-shadow: 0 0 5px rgba(0, 120, 215, 0.5);
+}
+
+.chat-box {
+    align-items: center;
+    padding: 5px;
+    background-color: #e9ecef;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #0078d7;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+button img {
+    width: 20px;
+    height: 20px;
+}
+textarea {
+    width: 98.3%; /* Ширина заповнює контейнер */
+    height: 290px; /* Фіксована висота */
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none; /* Заборонити змінювати розмір */
+    overflow: auto; /* Додає прокрутку, якщо текст перевищує висоту */
+}
+ </style>
+    <header>
+        <nav>
+        <ul> 
+            <a href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#Projekts">Projekts</a>
+            <a href="#Contact">Contact</a>
+        </ul>
+        </nav>
+    </header>
+    <section id="Home" style="background-image: url('images/work.jpg');">
+            <h1 id="hello">Freelance Web Developer</h1>
+    </section>
+    <section id="About">
+        <div class="me">
+            <h3 class="ko">Hi!</h3>
+        
+
+        <p class="ko">My name is 1g0rmanik, and I specialize in website development using HTML, CSS, and JavaScript. I also create designs in Figma. My profession brings me joy, and I truly enjoy spending my time working.
+
+            I completed a web development course at ITSTEP Academy and returned to programming two years later. Initially, revisiting the material was challenging, but within a week, I regained the knowledge I had acquired during the course. Additionally, I learned JavaScript on my own in just 1.5 months.
+            
+            I believe that design should not only be visually appealing but also functional. I enjoy collaborating with clients to create something truly valuable.
+            
+            In my free time, I work on creating and designing various logos.</p>
+        </div><div class="circle" style="background-image: url('images/work-table.jpg');"></div>
+        
+    </section>
+    <section id="Projekts">
+        <h1>My Skills and Work</h1>
+        <div id="box1">
+            <img src="images/hcj.png" alt="HTML, CSS, JavaScript logo" class="img">
+            <h2>Front-End Development</h2>
+            <p>I create responsive and visually appealing websites using HTML, CSS, and JavaScript.</p>
+        </div>
+        <div id="box2">
+            <img class="img2" src="images/web-design.png" alt="Web Design logo">
+            <h2>Web Design</h2>
+            <p>Designing user-friendly interfaces in Figma and converting them into code.</p>
+        </div>
+        <div id="box">
+            <img class="img3" src="images/free-icon-cms-1787257.png" alt="CMS logo">
+            <h2>CMS Platforms</h2>
+            <p>Building websites on WordPress and Shopify for quick solutions.</p>
+        </div>
+    </section>
+    <section id="Contact">
+        <div class="messenger-container">
+            <h2>Contact with me</h2>
+            <form id="message-form" action="https://formspree.io/f/xzzbqrgl"
+            method="POST">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <div class="chat-box">
+                    <div class="message received">Hi there! How can I help you?</div>
+                </div>
+                <textarea id="message" placeholder="Type your message..." rows="2" required name="message"></textarea>
+                <button type="submit">
+                    Send
+                </button>
+            </form>
+        </div>
+    </section>
+    <footer>© 1g0rmanik <a href="https://www.flaticon.com/free-icons/cms" title="cms icons">Cms icons created by Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/html" title="html icons">Html icons created by IconKanan - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/graphic-design" title="graphic design icons">Graphic design icons created by Freepik - Flaticon</a></footer>
+    <!--<script src="logick.js" defer></script>-->
+    <script defer>
+const box = document.getElementById('hello');
+const nav = document.querySelector('nav');
+
+addEventListener('click', () => {
+  nav.classList.toggle('show');
+});
+    </script>
+</body>
+</html>
